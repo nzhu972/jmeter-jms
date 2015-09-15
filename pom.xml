@@ -4,7 +4,7 @@
   <artifactId>jmeter-jms</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <properties>
-  	<runs/>1</runs>
+  	<runs>1</runs>
 	<subscribers>1</subscribers>
 	<destination>remoteTestQ</destination>
 	<hornetqHost>localhost</hornetqhost>
