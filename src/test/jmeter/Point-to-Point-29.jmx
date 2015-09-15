@@ -15,9 +15,9 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">4</stringProp>
+          <stringProp name="LoopController.loops">${__P(Runs,1)}</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">5</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${__P(Subscribers,1)}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <longProp name="ThreadGroup.start_time">1441394237000</longProp>
         <longProp name="ThreadGroup.end_time">1441394237000</longProp>
@@ -28,7 +28,7 @@
       <hashTree>
         <JMSSampler guiclass="JMSSamplerGui" testclass="JMSSampler" testname="JMS-Point-to-Point" enabled="true">
           <stringProp name="JMSSampler.queueconnectionfactory">jms/RemoteConnectionFactory</stringProp>
-          <stringProp name="JMSSampler.SendQueue">remoteTestQ</stringProp>
+          <stringProp name="JMSSampler.SendQueue">${__P(Destination,remoteTestQ)}</stringProp>
           <stringProp name="JMSSampler.ReceiveQueue"></stringProp>
           <boolProp name="JMSSampler.isFireAndForget">true</boolProp>
           <boolProp name="JMSSampler.isNonPersistent">false</boolProp>
@@ -36,7 +36,7 @@
           <stringProp name="JMSSampler.timeout"></stringProp>
           <stringProp name="HTTPSamper.xml_data">test</stringProp>
           <stringProp name="JMSSampler.initialContextFactory">org.jboss.naming.remote.client.InitialContextFactory</stringProp>
-          <stringProp name="JMSSampler.contextProviderUrl">remote://localhost:4447</stringProp>
+          <stringProp name="JMSSampler.contextProviderUrl">remote://${__P(HornetQHost,localhost)}:${__P(HornetQPort,4447)}</stringProp>
           <elementProp name="JMSSampler.jndiProperties" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="java.naming.security.principal" elementType="Argument">
