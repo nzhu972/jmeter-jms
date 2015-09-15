@@ -3,7 +3,13 @@
   <groupId>com.jmeter.jms</groupId>
   <artifactId>jmeter-jms</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-
+  <properties>
+  	<runs/>1</runs>
+	<subscribers>1</subscribers>
+	<destination>remoteTestQ</destination>
+	<hornetqHost>localhost</hornetqhost>
+	<hornetqPort>4447</Hornetqport>
+  </properties>
 	<build>
 		<plugins>
 			<plugin>
@@ -38,6 +44,13 @@
 			       from test-results, no matter if some requests failed or not, so we ignore jmeter failures.
 			    -->
 			    <ignoreResultFailures>true</ignoreResultFailures>
+			    <propertiesUser>
+			    	<Runs>${runs}</Runs>
+			    	<Subscribers>${subscribers}</Subscribers>
+			    	<Destination>${destination}</Destination>
+			    	<HornetQHost>${hornetqHost}</HornetQHost>
+			    	<HornetQPort>${hornetqPort}</HornetQPort>
+			    </propertiesUser>
 			  </configuration>
 			  <dependencies>
 			    <dependency>
