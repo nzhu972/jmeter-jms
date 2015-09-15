@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+  Multi purpose JMeter testplan which can be configured by passing properties to JMeter
+
+  The test contains one threadgroup.
+  (for additional threadgroups, copy a whole section and modify number accordingly)
+  If no properties are set for a threadgroup, it will not be started/used.
+
+  Threadgroup specific properties
+  * Runs                  = # of times the test repeats
+  * Subscribers           = number of threads to use
+  * Destination           = name of the queue
+  * HornetQHost           = message server name
+  * HornetQPort           = port of the server
+-->
 <jmeterTestPlan version="1.2" properties="2.4" jmeter="2.9 r1437961">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
