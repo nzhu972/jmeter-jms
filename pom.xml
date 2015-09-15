@@ -8,7 +8,7 @@
 	<subscribers>1</subscribers>
 	<destination>remoteTestQ</destination>
 	<hornetqHost>localhost</hornetqHost>
-	<hornetqPort>4447</HornetqPort>
+	<hornetqPort>4447</hornetqPort>
   </properties>
 	<build>
 		<plugins>
