@@ -51,6 +51,9 @@
 			    	<HornetQHost>${hornetqHost}</HornetQHost>
 			    	<HornetQPort>${hornetqPort}</HornetQPort>
 			    </propertiesUser>
+			    <testFilesIncluded>
+			    	<testFilesIncluded>Point-to-Point-29.jmx</testFilesIncluded>
+			    </testFilesIncluded>
 			  </configuration>
 			  <dependencies>
 			    <dependency>
